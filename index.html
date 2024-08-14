@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <main class="contenedor">
+        <section class="contenedor_izquierda">
+             <textarea class="contenedor_izquierda_input" id="valorUsuario" oninput="validarTexto(this.value)"
+             placeholder="Ingrese el texto aqui"></textarea>
+             <p class="contenedor_izquierda_mensaje"><img src="assets/Group.png" class="contenedor_izquierda_imagen">Solo letras minúsculas y sin acentos</p>
+            <div class="contenedor_izquierda_botones">
+                <button class="contenedor_izquierda_boton boton_izquierda" onclick="encriptar();">Encriptar</button>
+                <button class="contenedor_izquierda_boton boton_derecha" onclick="desencriptar()"> Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="contenedor_derecha">
+            <div id="contenedor_mensaje">
+                <img src="assets/Muneco.png" class="contenedor_derecha_imagen">
+                <p class="contenedor_derecha_mensaje">Ningún mensaje fue encontrado</p>
+                <p class="contenedor_derecha_ingresa">Ingrese el texto que desea encriptar o desencriptar</p>
+            </div>
+            <button class="contenedor_derecha_boton" onclick="copiar()" hidden>Copiar</button>
+        </section>
+    </main>
+    
+    <script src="app.js" defer></script>
+</body>
+</html>
